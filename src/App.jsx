@@ -15,11 +15,14 @@ function App() {
 }
 
 import {Link} from 'react-scroll'
+import {FaBars, FaTimes} from 'react-icons/fa'
 
 function Navbar() {
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
   return (
     <div className= "fixed top-0 left-0 w-full h-[80px] flex justify-between items-center px-4 bg-stone-900 text-gray-300 z-50">
-      <div>
+      <div className= "hidden md:flex">
         <ul className= "flex">
           <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline">
             <Link to="Intro" smooth={true} duration={500}>Introduction</Link>
@@ -35,6 +38,23 @@ function Navbar() {
           </li>
         </ul>
       </div>
+      <div onClick= {handleClick} className= "md:hidden z-10">
+        {!nav ? <FaBars></FaBars> : <FaTimes></FaTimes>}
+      </div>
+      <ul className= {!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-stone-900 text-gray-300 flex flex-col justify-center items-center"}>
+        <li className= "py-6 text-4xl px-4 cursor-pointer font-medium hover:text-white hover:underline">
+            <Link onClick= {handleClick} to="Intro" smooth={true} duration={500}>Introduction</Link>
+          </li>
+          <li className= "py-6 text-4xl px-4 cursor-pointer font-medium hover:text-white hover:underline">
+            <Link onClick= {handleClick} to="Academics" smooth={true} duration={500}>Academics</Link>
+          </li>
+          <li className= "py-6 text-4xl px-4 cursor-pointer font-medium hover:text-white hover:underline">
+            <Link onClick= {handleClick} to="Experiences" smooth={true} duration={500}>Experiences</Link>
+          </li>
+          <li className= "py-6 text-4xl px-4 cursor-pointer font-medium hover:text-white hover:underline">
+            <Link onClick= {handleClick} to="Projects" smooth={true} duration={500}>Projects</Link>
+          </li>
+      </ul>
     </div>
   )
 }
@@ -48,15 +68,13 @@ function Intro() {
       </div>
       <h1 className= "text-4xl md:text-7xl mb-1 md:mb-3 font-bold">Fathan Yazid Satriani</h1>
       <p className= "text-base md:text-xl mb-3 font-medium">Computer Engineering Student</p>
-      <p className= "text-md max-w-xl mb-6 font-bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus vel beatae libero a nemo alias exercitationem quasi quia, sit ratione, cupiditate aspernatur. Assumenda quasi asperiores non ab deserunt aliquam eius.
-      <br></br><br></br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit id sit unde voluptatum repellendus harum explicabo quia tempore, eligendi maxime rem atque et temporibus eveniet aperiam consequuntur dolorum tenetur!</p>
-      <div>
+      <p className= "text-md max-w-xl mb-6 font-bold">Greetings! My name is Fathan Yazid Satriani, but you can simply call me Ifan. I am currently pursuing my undergraduate degree in computer engineering at the prestigious University of Indonesia. Beyond my academics, I devote my free time to learning web development using frameworks such as Tailwind and React. I also actively engage in student organizations and committees, seeking to contribute to the community at my university. Looking forward to the exciting challenges and opportunities that lie ahead, I am committed to growing both personally and professionally in my studies.
+      <br></br><br></br>For more information about me, you can view my Curriculum Vitae by clicking on the button below!</p>
         <a href="/assets/Fathan Yazid Satriani CV ATS.pdf" target="_blank" rel="noopener noreferrer">
         <button className= "text-base md:text-xl mb-3 font-medium border-2 border-stone-900 px-3 py-1 flex items-center hover:bg-stone-900 hover:text-gray-200">
           View CV 
         </button>
         </a>
-      </div>
     </div>
   )
 }
@@ -65,7 +83,7 @@ import academicsdata from './data/academicsdata'
 
 function Academics() {
   return (
-    <div name="Academics" className= "w-full h-screen">
+    <div name="Academics" className= "w-full h-screen mt-20">
       <Title>Academics</Title>
       <div className= "flex flex-col md:flex-row items-center justify-center">
       <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -257,7 +275,7 @@ function Footer() {
 				&copy; {new Date().getFullYear()} Fathan Yazid Satriani. All rights reserved.
 			</p>
 		</div>
-	);
+	)
 }
 
 export default App
