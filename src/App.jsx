@@ -63,14 +63,14 @@ function Intro() {
   return (
     <div name="Intro" className= "w-full h-screen flex items-center justify-center flex-col text-center">
       <div>
-        <img src="/assets/Me.jpg" alt= "Photo of Me" className= "rounded-full shadow-md w-64 h-64 mb-8">
+        <img src="assets/Me.jpg" alt= "Photo of Me" className= "rounded-full shadow-md w-64 h-64 mb-8">
         </img>
       </div>
       <h1 className= "text-4xl md:text-7xl mb-1 md:mb-3 font-bold">Fathan Yazid Satriani</h1>
       <p className= "text-base md:text-xl mb-3 font-medium">Computer Engineering Student</p>
       <p className= "text-md max-w-xl mb-6 font-bold">Greetings! My name is Fathan Yazid Satriani, but you can simply call me Ifan. I am currently pursuing my undergraduate degree in computer engineering at the prestigious University of Indonesia. Beyond my academics, I devote my free time to learning web development using frameworks such as Tailwind and React. I also actively engage in student organizations and committees, seeking to contribute to the community at my university. Looking forward to the exciting challenges and opportunities that lie ahead, I am committed to growing both personally and professionally in my studies.
       <br></br><br></br>For more information about me, you can view my Curriculum Vitae by clicking on the button below!</p>
-        <a href="/assets/Fathan Yazid Satriani CV ATS.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="assets/Fathan Yazid Satriani CV ATS.pdf" target="_blank" rel="noopener noreferrer">
         <button className= "text-base md:text-xl mb-3 font-medium border-2 border-stone-900 px-3 py-1 flex items-center hover:bg-stone-900 hover:text-gray-200">
           View CV 
         </button>
