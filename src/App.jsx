@@ -61,7 +61,7 @@ function Navbar() {
 
 function Intro() {
   return (
-    <div name="Intro" className= "w-full h-screen flex items-center justify-center flex-col text-center">
+    <div name="Intro" className= "w-full h-screen flex items-center justify-center flex-col text-center mt-36 md:mt-4">
       <div>
         <img src="assets/Me.jpg" alt= "Photo of Me" className= "rounded-full shadow-md w-64 h-64 mb-8">
         </img>
@@ -129,7 +129,7 @@ import experiencesdata from './data/experiencesdata'
 
 function Experiences() {
   return (
-    <div name="Experiences" className= "w-full h-screen flex flex-col md:flex-row justify-center my-20">
+    <div name="Experiences" className= "w-full h-screen flex flex-col md:flex-row justify-center mt-56 md:mt-0">
       <div className= "w-full md:w-7/12">
         <Title>Experiences</Title>
         {experiencesdata.map (item => (
@@ -174,7 +174,7 @@ import projectsdata from './data/projectsdata'
 
 function Projects() {
   return (
-    <div name="Projects" className= "w-full flex flex-col md:flex-row items-center justify-center">
+    <div name="Projects" className= "w-full flex flex-col md:flex-row items-center justify-center lg:mt-0 md:mt-40 mt-32">
       <div className= "grid grid-cols-1 gap-4">
         <Title>Projects</Title>
         {projectsdata.map(project => (
@@ -226,7 +226,7 @@ function Title({children, id}) {
 
 function Footer() {
   return (
-		<div name="Footer" className="py-5 text-center">
+		<div name="Footer" className="py-3 text-center">
 				<div className="container max-w-screen-lg mx-auto">
 					<div>
 						<div className="flex flex-wrap justify-center gap-2">
