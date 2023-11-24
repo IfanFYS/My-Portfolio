@@ -28,16 +28,16 @@ function Navbar() {
     <div className= "fixed top-0 left-0 w-full h-[80px] flex justify-between items-center px-4 bg-stone-900 text-gray-300 z-50">
       <div className= "hidden md:flex">
         <ul className= "flex">
-          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline">
+          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline hover:font-bold hover:text-xl">
             <Link to="Intro" smooth={true} duration={500}>Introduction</Link>
           </li>
-          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline">
+          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline hover:font-bold hover:text-xl">
             <Link to="Academics" smooth={true} duration={500}>Academics</Link>
           </li>
-          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline">
+          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline hover:font-bold hover:text-xl">
             <Link to="Experiences" smooth={true} duration={500}>Experiences</Link>
           </li>
-          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline">
+          <li className= "px-4 cursor-pointer font-medium hover:text-white hover:underline hover:font-bold hover:text-xl">
             <Link to="Projects" smooth={true} duration={500}>Projects</Link>
           </li>
         </ul>
@@ -110,7 +110,7 @@ function AcademicsItem({title, imgurl, stack, link}) {
     <a href={link}
     target= "_blank"
     rel= "noopener noreferrer"
-    className= "border-2 border-stone-900 rounded-md overflow-hidden hover:bg-stone-900 hover:text-gray-200">
+    className= "border-2 border-stone-900 rounded-md overflow-hidden hover:bg-stone-900 hover:text-gray-200 hover:border-8">
       <img
       src={imgurl}
       alt= "Academics"
@@ -199,7 +199,7 @@ function ProjectsItem({title, imgurl, stack, link}) {
     <a href={link}
     target= "_blank"
     rel= "noopener noreferrer"
-    className= "border-2 border-stone-900 rounded-md overflow-hidden hover:bg-stone-900 hover:text-gray-200 mb-72">
+    className= "border-2 border-stone-900 rounded-md overflow-hidden hover:bg-stone-900 hover:text-gray-200 mb-72 hover:border-8">
       <img
       src={imgurl}
       alt= "Projects"
