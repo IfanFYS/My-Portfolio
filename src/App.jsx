@@ -4,10 +4,14 @@ import React, {useState} from 'react'
 function App() {
   return (
     <div className= "App">
+      <div name="Intro" className= 'h-[100px] md:h-[30px]'></div>
       <Navbar></Navbar>
       <Intro></Intro>
+      <div name="Academics" className= 'h-[100px]'></div>
       <Academics></Academics>
+      <div name="Experiences" className= 'h-[200px] md:h-[100px]'></div>
       <Experiences></Experiences>
+      <div name="Projects" className= 'h-[200px] md:h-[100px]'></div>
       <Projects></Projects>
       <Footer></Footer>
     </div>
@@ -61,7 +65,7 @@ function Navbar() {
 
 function Intro() {
   return (
-    <div name="Intro" className= "w-full h-screen flex items-center justify-center flex-col text-center mt-36 md:mt-4">
+    <div className= "w-full h-screen flex items-center justify-center flex-col text-center">
       <div>
         <img src="assets/Me.jpg" alt= "Photo of Me" className= "rounded-full shadow-md w-64 h-64 mb-8">
         </img>
@@ -83,7 +87,7 @@ import academicsdata from './data/academicsdata'
 
 function Academics() {
   return (
-    <div name="Academics" className= "w-full h-screen mt-20">
+    <div className= "w-full h-screen">
       <Title>Academics</Title>
       <div className= "flex flex-col md:flex-row items-center justify-center">
       <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -129,7 +133,7 @@ import experiencesdata from './data/experiencesdata'
 
 function Experiences() {
   return (
-    <div name="Experiences" className= "w-full h-screen flex flex-col md:flex-row justify-center mt-56 md:mt-0">
+    <div className= "w-full h-screen flex flex-col md:flex-row justify-center">
       <div className= "w-full md:w-7/12">
         <Title>Experiences</Title>
         {experiencesdata.map (item => (
@@ -174,7 +178,7 @@ import projectsdata from './data/projectsdata'
 
 function Projects() {
   return (
-    <div name="Projects" className= "w-full flex flex-col md:flex-row items-center justify-center lg:mt-0 md:mt-40 mt-32">
+    <div className= "w-full flex flex-col md:flex-row items-center justify-center">
       <div className= "grid grid-cols-1 gap-4">
         <Title>Projects</Title>
         {projectsdata.map(project => (
@@ -226,7 +230,7 @@ function Title({children, id}) {
 
 function Footer() {
   return (
-		<div name="Footer" className="py-3 text-center">
+		<div name="Footer" className="text-center">
 				<div className="container max-w-screen-lg mx-auto">
 					<div>
 						<div className="flex flex-wrap justify-center gap-2">
