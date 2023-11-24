@@ -1,22 +1,24 @@
 import './App.css'
 import React, {useState} from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
     <div className= "App">
-      <div name="Intro" className= 'h-[100px] md:h-[30px]'></div>
-      <Navbar></Navbar>
-      <Intro></Intro>
-      <div name="Academics" className= 'h-[100px]'></div>
-      <Academics></Academics>
-      <div name="Experiences" className= 'h-[200px] md:h-[100px]'></div>
-      <Experiences></Experiences>
-      <div name="Projects" className= 'h-[200px] md:h-[100px]'></div>
-      <Projects></Projects>
-      <Footer></Footer>
+      <div>test</div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<div><div name="Intro" className= 'h-[100px] md:h-[30px]'></div><Navbar></Navbar><Intro></Intro></div>}></Route>
+          <Route path= "Intro" element={<div><div name="Intro" className= 'h-[100px] md:h-[30px]'></div><Navbar></Navbar><Intro></Intro></div>}></Route>
+          <Route path= "Academics" element={<div><div name="Academics" className= 'h-[100px]'></div><Academics></Academics></div>}></Route>
+          <Route path= "Experiences" element={<div><div name="Experiences" className= 'h-[200px] md:h-[100px]'></div><Experiences></Experiences></div>}></Route>
+          <Route path= "Projects" element={<div><div name="Projects" className= 'h-[200px] md:h-[100px]'></div><Projects></Projects><Footer></Footer></div>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
+
 
 import {Link} from 'react-scroll'
 import {FaBars, FaTimes} from 'react-icons/fa'
